@@ -16,7 +16,7 @@
  * [Changes](#changes-to-vrp-mandatory) - Mandatory modifications to vRP;
  
  #### Optionals
- * [vRP_cards]() - Cards for players to buy stuff with them;
+ * [vRP_cards](https://github.com/CPietro/vRP_cards) - Cards for players to buy stuff with them;
 
 ## Installation
   1. [IMPORTANT!] Install the dependencies first;
