@@ -1,3 +1,5 @@
+local Lang = module("vrp", "lib/Lang")
+lang = Lang.new(module("vrp_items", "cfg/lang"))
 if config.cards then
 	MySQL.createCommand("vRP/insert_num_pin","UPDATE vrp_cards SET numerocarta = @numerocarta , pin = @pin WHERE user_id = @user_id")
 end
@@ -13,7 +15,7 @@ cfg.adaptive_items = {
 			menu[lang.common.sign()] = {function(player,choice)
 				local user_id = vRP.getUserId({player})
 				if user_id ~= nil then
-					if vRP.tryGetInventoryItem({user_id,"contrattocarta",1,false}) and ( vRP.tryGetInventoryItem({user_id,"penna",1,false}) or vRP.tryGetInventoryItem({user_id,"pennablu_3",1,false}) ) then
+					if vRP.tryGetInventoryItem({user_id,"cardcontract",1,false}) and ( vRP.tryGetInventoryItem({user_id,"penna",1,false}) or vRP.tryGetInventoryItem({user_id,"pennablu_3",1,false}) ) then
 						vRPclient.notify(player,{lang.common.writing()})
 						vRPclient.playAnim(player,{false,{task="CODE_HUMAN_MEDIC_TIME_OF_DEATH"},true})             
 						vRP.getUserIdentity({user_id, function(identity)
@@ -66,7 +68,7 @@ cfg.adaptive_items = {
 			menu[lang.common.sign()] = {function(player,choice)
 			local user_id = vRP.getUserId({player})
 			if user_id ~= nil then
-				if vRP.tryGetInventoryItem({user_id,"contratto_a",1,false}) and ( vRP.tryGetInventoryItem({user_id,"penna",1,false}) or vRP.tryGetInventoryItem({user_id,"pennablu_3",1,false}) ) then
+				if vRP.tryGetInventoryItem({user_id,"driving_contract",1,false}) and ( vRP.tryGetInventoryItem({user_id,"penna",1,false}) or vRP.tryGetInventoryItem({user_id,"pennablu_3",1,false}) ) then
 					vRPclient.notify(player,{lang.common.writing()})
 					vRPclient.playAnim(player,{false,{task="CODE_HUMAN_MEDIC_TIME_OF_DEATH"},true}) 
 					vRP.getUserIdentity({user_id, function(identity)
