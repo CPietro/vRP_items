@@ -1,3 +1,5 @@
+local Lang = module("vrp", "lib/Lang")
+lang = Lang.new(module("vrp_items", "cfg/lang"))
 local zaino_shops = {
 	{-927.94635009766,-2954.02734375,13.945074081421,"lsia.mission"}
 }
